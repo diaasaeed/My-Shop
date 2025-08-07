@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XPj-u4-1vZ">
-                                <rect key="frame" x="10" y="163" width="373" height="611"/>
+                                <rect key="frame" x="0.0" y="162" width="393" height="622"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VAz-Ii-Vjc">
                                     <size key="itemSize" width="128" height="128"/>
@@ -33,12 +33,12 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JYY-JJ-Mis"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="JYY-JJ-Mis" firstAttribute="bottom" secondItem="XPj-u4-1vZ" secondAttribute="bottom" constant="10" id="2vE-xk-BEc"/>
-                            <constraint firstItem="XPj-u4-1vZ" firstAttribute="top" secondItem="JYY-JJ-Mis" secondAttribute="top" constant="1" id="FxK-h3-j6d"/>
-                            <constraint firstItem="JYY-JJ-Mis" firstAttribute="trailing" secondItem="XPj-u4-1vZ" secondAttribute="trailing" constant="10" id="d8N-9g-UGF"/>
-                            <constraint firstItem="XPj-u4-1vZ" firstAttribute="leading" secondItem="JYY-JJ-Mis" secondAttribute="leading" constant="10" id="gwe-W4-ku8"/>
+                            <constraint firstItem="JYY-JJ-Mis" firstAttribute="bottom" secondItem="XPj-u4-1vZ" secondAttribute="bottom" id="2vE-xk-BEc"/>
+                            <constraint firstItem="XPj-u4-1vZ" firstAttribute="top" secondItem="JYY-JJ-Mis" secondAttribute="top" id="FxK-h3-j6d"/>
+                            <constraint firstItem="JYY-JJ-Mis" firstAttribute="trailing" secondItem="XPj-u4-1vZ" secondAttribute="trailing" id="d8N-9g-UGF"/>
+                            <constraint firstItem="XPj-u4-1vZ" firstAttribute="leading" secondItem="JYY-JJ-Mis" secondAttribute="leading" id="gwe-W4-ku8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Djg-U6-vdF"/>
@@ -73,9 +73,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

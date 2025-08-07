@@ -48,36 +48,28 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 $" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wen-iG-IIo">
-                                <rect key="frame" x="130" y="64.333333333333329" width="40.666666666666657" height="19.333333333333329"/>
+                                <rect key="frame" x="130" y="78.666666666666671" width="40.666666666666657" height="19.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9L-fi-ISZ">
-                                <rect key="frame" x="130" y="40" width="314" height="14.333333333333336"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9L-fi-ISZ">
+                                <rect key="frame" x="130" y="40" width="314" height="28.666666666666671"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Qlw-0b-3ZO">
-                                <rect key="frame" x="374" y="64.333333333333329" width="70" height="20"/>
+                                <rect key="frame" x="396" y="78.666666666666671" width="48" height="12"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="308-Pw-eWM">
-                                        <rect key="frame" x="0.0" y="-0.33333333333333215" width="20" height="19.666666666666664"/>
-                                        <color key="tintColor" red="1" green="0.58431372550000005" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="BbK-xf-O1I"/>
-                                            <constraint firstAttribute="height" constant="20" id="e3q-Xu-tOW"/>
-                                        </constraints>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtF-5o-gLB">
-                                        <rect key="frame" x="22" y="0.0" width="16.666666666666671" height="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="16.666666666666668" height="12"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(230)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2CE-SV-x3v">
-                                        <rect key="frame" x="40.666666666666686" y="0.0" width="29.333333333333329" height="20"/>
+                                        <rect key="frame" x="18.666666666666686" y="0.0" width="29.333333333333329" height="12"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -113,21 +105,20 @@
             </constraints>
             <size key="customSize" width="506" height="119"/>
             <connections>
-                <outlet property="categoryView" destination="BwT-3H-KDK" id="2Zf-ui-K8c"/>
-                <outlet property="producntTitle" destination="P9L-fi-ISZ" id="zoQ-ge-r1j"/>
-                <outlet property="producntView" destination="owP-ov-aQ8" id="xv5-3F-6m1"/>
-                <outlet property="productCategory" destination="p41-5H-hKp" id="Foc-92-8If"/>
-                <outlet property="productCountReviews" destination="2CE-SV-x3v" id="FGh-NV-MrT"/>
-                <outlet property="productImg" destination="sjj-RK-fbU" id="2lu-SX-2hW"/>
-                <outlet property="productPrice" destination="Wen-iG-IIo" id="N47-R9-xdW"/>
-                <outlet property="productRate" destination="CtF-5o-gLB" id="bRe-7a-ZUr"/>
+                <outlet property="categoryView" destination="BwT-3H-KDK" id="HP2-y8-831"/>
+                <outlet property="producntTitle" destination="P9L-fi-ISZ" id="Mjg-S6-pW8"/>
+                <outlet property="producntView" destination="owP-ov-aQ8" id="yvL-LL-05x"/>
+                <outlet property="productCategory" destination="p41-5H-hKp" id="Nqb-6J-tam"/>
+                <outlet property="productCountReviews" destination="2CE-SV-x3v" id="J7u-NP-Egn"/>
+                <outlet property="productImg" destination="sjj-RK-fbU" id="zoV-eC-Qbk"/>
+                <outlet property="productPrice" destination="Wen-iG-IIo" id="WFq-QP-mQF"/>
+                <outlet property="productRate" destination="CtF-5o-gLB" id="9GW-yV-KOx"/>
             </connections>
             <point key="canvasLocation" x="343.51145038167937" y="44.014084507042256"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="Product" width="418" height="597"/>
-        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

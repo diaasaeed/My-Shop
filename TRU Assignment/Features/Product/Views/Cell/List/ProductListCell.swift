@@ -9,7 +9,6 @@ import UIKit
 
 class ProductListCell: UICollectionViewCell {
 
-  
     @IBOutlet weak var productImg: UIImageView!
     @IBOutlet weak var producntTitle: UILabel!
     @IBOutlet weak var productCategory: UILabel!
@@ -19,10 +18,8 @@ class ProductListCell: UICollectionViewCell {
     @IBOutlet weak var producntView: UIView!
     @IBOutlet weak var categoryView: UIView!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         setupUI()
     }
     
@@ -34,19 +31,87 @@ class ProductListCell: UICollectionViewCell {
         producntView.layer.shadowOffset = CGSize(width: 0, height: 2)
         producntView.layer.shadowRadius = 6
         producntView.layer.masksToBounds = false
-        producntView.backgroundColor = .white  // or your cell background color
+        producntView.backgroundColor = .systemBackground
 
         // categoryView - Only Corner Radius
         categoryView.layer.cornerRadius = 8
         categoryView.layer.masksToBounds = true
+        categoryView.backgroundColor = .systemBlue.withAlphaComponent(0.1)
+        
+        // Configure image view
+        productImg.contentMode = .scaleAspectFit
+        productImg.clipsToBounds = true
+        productImg.layer.cornerRadius = 8
+        productImg.backgroundColor = .systemGray6
+        
+        // Configure labels with proper spacing and constraints
+        configureLabels()
     }
     
+    private func configureLabels() {
+        // Title label
+        producntTitle.font = .systemFont(ofSize: 16, weight: .semibold)
+        producntTitle.numberOfLines = 2
+        producntTitle.textColor = .label
+        producntTitle.lineBreakMode = .byTruncatingTail
+        
+        // Category label
+        productCategory.font = .systemFont(ofSize: 12, weight: .medium)
+        productCategory.textColor = .secondaryLabel
+        productCategory.numberOfLines = 1
+        productCategory.lineBreakMode = .byTruncatingTail
+        
+        // Price label
+        productPrice.font = .systemFont(ofSize: 18, weight: .bold)
+        productPrice.textColor = .systemGreen
+        productPrice.numberOfLines = 1
+        
+        // Rate label
+        productRate.font = .systemFont(ofSize: 14, weight: .medium)
+        productRate.textColor = .systemOrange
+        productRate.numberOfLines = 1
+        
+        // Count reviews label
+        productCountReviews.font = .systemFont(ofSize: 12, weight: .regular)
+        productCountReviews.textColor = .tertiaryLabel
+        productCountReviews.numberOfLines = 1
+    }
     
-    func setProductData(product: Product) {
-        self.producntTitle.text = product.title
-        self.productCategory.text = product.category
-        self.productPrice.text = "\(product.price)"
-        self.productRate.text = "\(product.rating.rate)"
-        self.productCountReviews.text = "\(product.rating.count)"
+    func configure(product: Product) {
+        // Configure all labels with proper spacing
+        producntTitle.text = product.title
+        productCategory.text = product.category.capitalized
+        productPrice.text = "$\(String(format: "%.2f", product.price))"
+        productRate.text = "\(String(format: "%.1f", product.rating.rate))"
+        productCountReviews.text = "(\(product.rating.count))"
+        
+        // Load image
+        if let url = URL(string: product.image) {
+            loadImage(from: url)
+        } else {
+            productImg.image = UIImage(systemName: "photo")
+        }
+    }
+
+    private func loadImage(from url: URL) {
+        URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
+            DispatchQueue.main.async {
+                if let data = data, let image = UIImage(data: data) {
+                    self?.productImg.image = image
+                } else {
+                    self?.productImg.image = UIImage(systemName: "photo")
+                }
+            }
+        }.resume()
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        productImg.image = nil
+        producntTitle.text = nil
+        productCategory.text = nil
+        productPrice.text = nil
+        productRate.text = nil
+        productCountReviews.text = nil
     }
 }
