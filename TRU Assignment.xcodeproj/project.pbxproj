@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0F667DFEA16E97F7FA392C02 /* Pods_TRU_AssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A011E9E5ABF64A5E1CB035DC /* Pods_TRU_AssignmentTests.framework */; };
+		43C6DC768C07E8BFB1F3CE74 /* Pods_TRU_Assignment_TRU_AssignmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D435B5EE4F34597CCD977E1F /* Pods_TRU_Assignment_TRU_AssignmentUITests.framework */; };
+		54BEC9BF3BDCF794DD42BCEC /* Pods_TRU_Assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8A0E797D8CE7A9C76402E4B /* Pods_TRU_Assignment.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		01F6DDB32E43D69800C58F6D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +33,15 @@
 		01F6DD992E43D69600C58F6D /* TRU Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TRU Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F6DDB22E43D69800C58F6D /* TRU AssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TRU AssignmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F6DDBC2E43D69800C58F6D /* TRU AssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TRU AssignmentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		10B3EA203FAAB5016ED03D27 /* Pods-TRU Assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRU Assignment.debug.xcconfig"; path = "Target Support Files/Pods-TRU Assignment/Pods-TRU Assignment.debug.xcconfig"; sourceTree = "<group>"; };
+		378068CA871A23AD04C1369A /* Pods-TRU Assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRU Assignment.release.xcconfig"; path = "Target Support Files/Pods-TRU Assignment/Pods-TRU Assignment.release.xcconfig"; sourceTree = "<group>"; };
+		799ED29D05E840B55E53240B /* Pods-TRU Assignment-TRU AssignmentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRU Assignment-TRU AssignmentUITests.release.xcconfig"; path = "Target Support Files/Pods-TRU Assignment-TRU AssignmentUITests/Pods-TRU Assignment-TRU AssignmentUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7EB7FB282B76615B5C7FB7AC /* Pods-TRU AssignmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRU AssignmentTests.debug.xcconfig"; path = "Target Support Files/Pods-TRU AssignmentTests/Pods-TRU AssignmentTests.debug.xcconfig"; sourceTree = "<group>"; };
+		93909446D05976A93678040D /* Pods-TRU AssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRU AssignmentTests.release.xcconfig"; path = "Target Support Files/Pods-TRU AssignmentTests/Pods-TRU AssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
+		A011E9E5ABF64A5E1CB035DC /* Pods_TRU_AssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TRU_AssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB6F516FA74A9A96F6D43A10 /* Pods-TRU Assignment-TRU AssignmentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRU Assignment-TRU AssignmentUITests.debug.xcconfig"; path = "Target Support Files/Pods-TRU Assignment-TRU AssignmentUITests/Pods-TRU Assignment-TRU AssignmentUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B8A0E797D8CE7A9C76402E4B /* Pods_TRU_Assignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TRU_Assignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D435B5EE4F34597CCD977E1F /* Pods_TRU_Assignment_TRU_AssignmentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TRU_Assignment_TRU_AssignmentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -65,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54BEC9BF3BDCF794DD42BCEC /* Pods_TRU_Assignment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F667DFEA16E97F7FA392C02 /* Pods_TRU_AssignmentTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43C6DC768C07E8BFB1F3CE74 /* Pods_TRU_Assignment_TRU_AssignmentUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +110,8 @@
 				01F6DDB52E43D69800C58F6D /* TRU AssignmentTests */,
 				01F6DDBF2E43D69800C58F6D /* TRU AssignmentUITests */,
 				01F6DD9A2E43D69600C58F6D /* Products */,
+				D4CA23E53E78681D8639D786 /* Pods */,
+				7E011AB627652CF71FE40481 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +125,29 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		7E011AB627652CF71FE40481 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B8A0E797D8CE7A9C76402E4B /* Pods_TRU_Assignment.framework */,
+				D435B5EE4F34597CCD977E1F /* Pods_TRU_Assignment_TRU_AssignmentUITests.framework */,
+				A011E9E5ABF64A5E1CB035DC /* Pods_TRU_AssignmentTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4CA23E53E78681D8639D786 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				10B3EA203FAAB5016ED03D27 /* Pods-TRU Assignment.debug.xcconfig */,
+				378068CA871A23AD04C1369A /* Pods-TRU Assignment.release.xcconfig */,
+				AB6F516FA74A9A96F6D43A10 /* Pods-TRU Assignment-TRU AssignmentUITests.debug.xcconfig */,
+				799ED29D05E840B55E53240B /* Pods-TRU Assignment-TRU AssignmentUITests.release.xcconfig */,
+				7EB7FB282B76615B5C7FB7AC /* Pods-TRU AssignmentTests.debug.xcconfig */,
+				93909446D05976A93678040D /* Pods-TRU AssignmentTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,9 +155,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01F6DDC52E43D69800C58F6D /* Build configuration list for PBXNativeTarget "TRU Assignment" */;
 			buildPhases = (
+				7DE837F0BF9B03DDC67DCF91 /* [CP] Check Pods Manifest.lock */,
 				01F6DD952E43D69600C58F6D /* Sources */,
 				01F6DD962E43D69600C58F6D /* Frameworks */,
 				01F6DD972E43D69600C58F6D /* Resources */,
+				668DA06D52585AC9A4C1A9A1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,8 +169,6 @@
 				01F6DD9B2E43D69600C58F6D /* TRU Assignment */,
 			);
 			name = "TRU Assignment";
-			packageProductDependencies = (
-			);
 			productName = "TRU Assignment";
 			productReference = 01F6DD992E43D69600C58F6D /* TRU Assignment.app */;
 			productType = "com.apple.product-type.application";
@@ -134,6 +177,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01F6DDCA2E43D69800C58F6D /* Build configuration list for PBXNativeTarget "TRU AssignmentTests" */;
 			buildPhases = (
+				43E7F84C194383064B532AC0 /* [CP] Check Pods Manifest.lock */,
 				01F6DDAE2E43D69800C58F6D /* Sources */,
 				01F6DDAF2E43D69800C58F6D /* Frameworks */,
 				01F6DDB02E43D69800C58F6D /* Resources */,
@@ -147,8 +191,6 @@
 				01F6DDB52E43D69800C58F6D /* TRU AssignmentTests */,
 			);
 			name = "TRU AssignmentTests";
-			packageProductDependencies = (
-			);
 			productName = "TRU AssignmentTests";
 			productReference = 01F6DDB22E43D69800C58F6D /* TRU AssignmentTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -157,9 +199,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01F6DDCD2E43D69800C58F6D /* Build configuration list for PBXNativeTarget "TRU AssignmentUITests" */;
 			buildPhases = (
+				8A7D1EF1A7469B5A1A542851 /* [CP] Check Pods Manifest.lock */,
 				01F6DDB82E43D69800C58F6D /* Sources */,
 				01F6DDB92E43D69800C58F6D /* Frameworks */,
 				01F6DDBA2E43D69800C58F6D /* Resources */,
+				5357831FA0A8369275181316 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,8 +214,6 @@
 				01F6DDBF2E43D69800C58F6D /* TRU AssignmentUITests */,
 			);
 			name = "TRU AssignmentUITests";
-			packageProductDependencies = (
-			);
 			productName = "TRU AssignmentUITests";
 			productReference = 01F6DDBC2E43D69800C58F6D /* TRU AssignmentUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -244,6 +286,117 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		43E7F84C194383064B532AC0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TRU AssignmentTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5357831FA0A8369275181316 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TRU Assignment-TRU AssignmentUITests/Pods-TRU Assignment-TRU AssignmentUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TRU Assignment-TRU AssignmentUITests/Pods-TRU Assignment-TRU AssignmentUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TRU Assignment-TRU AssignmentUITests/Pods-TRU Assignment-TRU AssignmentUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		668DA06D52585AC9A4C1A9A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TRU Assignment/Pods-TRU Assignment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TRU Assignment/Pods-TRU Assignment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TRU Assignment/Pods-TRU Assignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DE837F0BF9B03DDC67DCF91 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TRU Assignment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A7D1EF1A7469B5A1A542851 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TRU Assignment-TRU AssignmentUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		01F6DD952E43D69600C58F6D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -284,12 +437,14 @@
 /* Begin XCBuildConfiguration section */
 		01F6DDC62E43D69800C58F6D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10B3EA203FAAB5016ED03D27 /* Pods-TRU Assignment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X329TZD97B;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "TRU Assignment/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -312,12 +467,14 @@
 		};
 		01F6DDC72E43D69800C58F6D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 378068CA871A23AD04C1369A /* Pods-TRU Assignment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X329TZD97B;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "TRU Assignment/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -461,6 +618,7 @@
 		};
 		01F6DDCB2E43D69800C58F6D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EB7FB282B76615B5C7FB7AC /* Pods-TRU AssignmentTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -480,6 +638,7 @@
 		};
 		01F6DDCC2E43D69800C58F6D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93909446D05976A93678040D /* Pods-TRU AssignmentTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -499,6 +658,7 @@
 		};
 		01F6DDCE2E43D69800C58F6D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB6F516FA74A9A96F6D43A10 /* Pods-TRU Assignment-TRU AssignmentUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -516,6 +676,7 @@
 		};
 		01F6DDCF2E43D69800C58F6D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 799ED29D05E840B55E53240B /* Pods-TRU Assignment-TRU AssignmentUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

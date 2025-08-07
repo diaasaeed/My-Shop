@@ -1,0 +1,6 @@
+framework module Pods_TRU_Assignment_TRU_AssignmentUITests {
+  umbrella header "Pods-TRU Assignment-TRU AssignmentUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
