@@ -7,7 +7,21 @@
 
 import Moya
 import Foundation
-let moyaProvider = NetworkClient(transport: MoyaProvider<MoyaAPI>(plugins: [NetworkLoggerPlugin()]))
+
+// Custom URLSession configuration with longer timeout
+private func createCustomSession() -> Session {
+    let configuration = URLSessionConfiguration.default
+    configuration.timeoutIntervalForRequest = 30.0  // 30 seconds timeout
+    configuration.timeoutIntervalForResource = 60.0 // 60 seconds resource timeout
+    configuration.headers = .default
+    
+    return Session(configuration: configuration, startRequestsImmediately: false)
+}
+
+let moyaProvider = NetworkClient(transport: MoyaProvider<MoyaAPI>(
+    session: createCustomSession(),
+    plugins: [NetworkLoggerPlugin()]
+))
 
 extension MoyaProvider: Transport where Target == MoyaAPI {
     func send(endPoint: APIEndpoint, completion: @escaping (Result<(data: Data, response: HTTPURLResponse), Error>) -> ()) {

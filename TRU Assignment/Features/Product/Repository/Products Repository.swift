@@ -32,34 +32,41 @@ class ProductsRepository: ProductsRepositoryProtocol {
     }
     
     func fetchProducts(limit: Int, completion: @escaping (Result<[Product], Error>) -> Void) {
-        // Check if we have internet connection
-        if reachabilityManager.isConnected {
-            // Fetch from network using ProductsRequest
-            productsRequest.fetchProducts(limit: limit) { [weak self] result in
-                DispatchQueue.main.async {
-                    switch result {
-                    case .success(let products):
-                        // Save to cache (Core Data or in-memory)
-                        self?.saveProductsToCache(products)
-                        completion(.success(products))
-                    case .failure(let error):
-                        // If network fails, try to get from cache
-                        let cachedProducts = self?.getCachedProducts(limit: limit, offset: 0) ?? []
-                        if !cachedProducts.isEmpty {
-                            completion(.success(cachedProducts))
-                        } else {
+        // Always attempt network request first, regardless of reachability status
+        // This is because NetworkReachabilityManager might not be ready immediately on app launch
+        productsRequest.fetchProducts(limit: limit) { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let products):
+                    print("Repository: Successfully fetched \(products.count) products from network")
+                    // Save to cache (Core Data or in-memory)
+                    self?.saveProductsToCache(products)
+                    completion(.success(products))
+                    
+                case .failure(let error):
+                    print(" Repository: Network request failed: \(error.localizedDescription)")
+                    
+                    // Check if it's a network connectivity issue
+                    if let apiError = error as? APIError {
+                        switch apiError {
+                        case .noInternet, .requestTimeOut, .otherError:
+                            print("Repository: Network issue detected, checking cache...")
+                            break
+                        default:
+                            // For other API errors, don't try cache
                             completion(.failure(error))
+                            return
                         }
                     }
+                    
+                    // Try to get from cache as fallback
+                    let cachedProducts = self?.getCachedProducts(limit: limit, offset: 0) ?? []
+                    if !cachedProducts.isEmpty {
+                        completion(.success(cachedProducts))
+                    } else {
+                        completion(.failure(error))
+                    }
                 }
-            }
-        } else {
-            // No internet connection, get from cache
-            let cachedProducts = getCachedProducts(limit: limit, offset: 0)
-            if !cachedProducts.isEmpty {
-                completion(.success(cachedProducts))
-            } else {
-                completion(.failure(APIError.noInternet))
             }
         }
     }

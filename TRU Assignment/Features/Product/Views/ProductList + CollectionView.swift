@@ -39,7 +39,7 @@ extension ProductListViewController{
         
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
-            heightDimension: .absolute(isIPad ? 380 : 320) // Increased height for better text spacing
+            heightDimension: .absolute(290) // Increased height for better text spacing
         )
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
@@ -110,6 +110,8 @@ extension ProductListViewController: UICollectionViewDelegate {
         let product = viewModel.products[indexPath.item]
         if viewModel.shouldLoadMore(for: product) {
             viewModel.loadMoreProducts()
+        } else {
+            print("Not triggering loadMore - shouldLoadMore returned false")
         }
     }
 }
