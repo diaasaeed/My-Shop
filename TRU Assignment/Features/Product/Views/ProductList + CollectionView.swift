@@ -33,7 +33,7 @@ extension ProductListViewController{
         let columns = isIPad ? 4 : 2
         
         let itemSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1.0 / CGFloat(columns)),
+            widthDimension: .fractionalWidth(1.0),
             heightDimension: .fractionalHeight(1.0)
         )
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -41,9 +41,9 @@ extension ProductListViewController{
         
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
-            heightDimension: .absolute(290) // Increased height for better text spacing
+            heightDimension: .absolute(290)
         )
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: columns)
         
         let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16)
@@ -55,20 +55,20 @@ extension ProductListViewController{
         let columns = isIPad ? 2 : 1
         
         let itemSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1.0 / CGFloat(columns)),
-            heightDimension: .absolute(isIPad ? 180 : 160) // Increased height for better text spacing
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .absolute(isIPad ? 180 : 160)
         )
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 12, bottom: 8, trailing: 12) // Increased insets
+        item.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 12, bottom: 8, trailing: 12)
         
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
             heightDimension: .absolute(isIPad ? 180 : 160)
         )
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: columns)
         
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: 12, leading: 16, bottom: 12, trailing: 16) // Increased spacing
+        section.contentInsets = NSDirectionalEdgeInsets(top: 12, leading: 16, bottom: 12, trailing: 16)
         
         return UICollectionViewCompositionalLayout(section: section)
     }
@@ -110,6 +110,17 @@ extension ProductListViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         guard indexPath.item < viewModel.products.count else { return }
+        
+        // Skip appearance animation while skeleton is active
+        if !collectionView.isSkeletonActive {
+            cell.alpha = 0
+            cell.transform = CGAffineTransform(translationX: 0, y: 20)
+            UIView.animate(withDuration: 0.3, delay: 0.03 * Double(indexPath.item % 10), options: [.curveEaseOut], animations: {
+                cell.alpha = 1
+                cell.transform = .identity
+            }, completion: nil)
+        }
+        
         let product = viewModel.products[indexPath.item]
         if viewModel.shouldLoadMore(for: product) {
             viewModel.loadMoreProducts()
