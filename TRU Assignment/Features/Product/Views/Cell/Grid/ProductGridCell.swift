@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SDWebImage
 class ProductGridCell: UICollectionViewCell {
     
     @IBOutlet weak var productImg: UIImageView!
@@ -95,15 +95,7 @@ class ProductGridCell: UICollectionViewCell {
     
     
     private func loadImage(from url: URL) {
-        URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
-            DispatchQueue.main.async {
-                if let data = data, let image = UIImage(data: data) {
-                    self?.productImg.image = image
-                } else {
-                    self?.productImg.image = UIImage(systemName: "photo")
-                }
-            }
-        }.resume()
+        self.productImg.sd_setImage(with: url, placeholderImage: UIImage(systemName: "photo.fill"), context: nil)
     }
     
     

@@ -8,7 +8,7 @@ target 'TRU Assignment' do
   # Pods for TRU Assignment
   pod 'Moya'
   pod 'SkeletonView'
-
+  pod 'SDWebImage'
   
   target 'TRU AssignmentTests' do
     inherit! :search_paths

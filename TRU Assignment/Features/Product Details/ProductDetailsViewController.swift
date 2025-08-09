@@ -57,16 +57,8 @@ class ProductDetailsTableViewController: UIViewController {
     }
     
     private func loadImage(from url: URL, into imageView: UIImageView) {
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            DispatchQueue.main.async {
-                if let data = data, let image = UIImage(data: data) {
-                    imageView.image = image
-                } else {
-                    imageView.image = UIImage(systemName: "photo.fill")
-                    imageView.tintColor = .systemGray4
-                }
-            }
-        }.resume()
+        imageView.sd_setImage(with: url, placeholderImage: UIImage(systemName: "photo.fill"), context:nil)
+
     }
 }
 
