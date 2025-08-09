@@ -42,7 +42,8 @@ class ProductListViewController: UIViewController {
         setupSkeletonView()
         showSkeletonAnimation()
         
-        Timer.scheduledTimer(withTimeInterval: 4, repeats: false, block: { _ in
+        //Note:-  I added a 1-second timer here just to let you see the SkeletonView animation before the data loads
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { _ in
             self.loadData()
 
         })

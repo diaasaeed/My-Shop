@@ -53,6 +53,7 @@ extension ProductListViewController {
         print("🦴 Showing skeleton animation for backend response...")
         
         // Create sliding animation
+        
         let animation = SkeletonAnimationBuilder().makeSlidingAnimation(withDirection: .leftRight)
         
         // Create gradient for skeleton

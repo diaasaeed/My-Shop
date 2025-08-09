@@ -89,7 +89,7 @@ extension ProductListViewController: UICollectionViewDataSource {
         switch layoutStyle {
         case .grid:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductGridCell", for: indexPath) as! ProductGridCell
-            cell.configure(product: product)
+                cell.configure(product: product)
             return cell
             
         case .list:

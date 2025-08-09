@@ -124,7 +124,6 @@ class ProductListCell: UICollectionViewCell {
            producntView.isSkeletonable = true
            productImg.isSkeletonable = true
            producntTitle.isSkeletonable = true
-           productCategory.isSkeletonable = true
            productPrice.isSkeletonable = true
            productRate.isSkeletonable = true
            productCountReviews.isSkeletonable = true
@@ -136,16 +135,9 @@ class ProductListCell: UICollectionViewCell {
            
            // Configure text line heights for labels
            producntTitle.linesCornerRadius = 4
-           productCategory.linesCornerRadius = 4
            productPrice.linesCornerRadius = 4
            productRate.linesCornerRadius = 4
            productCountReviews.linesCornerRadius = 4
-           
-           // Set number of skeleton lines for multi-line labels
-           producntTitle.skeletonTextNumberOfLines = 2
-           productCategory.skeletonTextNumberOfLines = 1
-           productPrice.skeletonTextNumberOfLines = 1
-           productRate.skeletonTextNumberOfLines = 1
-           productCountReviews.skeletonTextNumberOfLines = 1
+
        }
 }
