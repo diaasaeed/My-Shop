@@ -8,6 +8,7 @@
 import UIKit
 import SwiftUI
 import Combine
+import SkeletonView
 
 enum LayoutStyle {
     case list
@@ -37,7 +38,14 @@ class ProductListViewController: UIViewController {
         setupUI()
         setupCollectionView()
         setupNavigationBar()
-        loadData()
+
+        setupSkeletonView()
+        showSkeletonAnimation()
+        
+        Timer.scheduledTimer(withTimeInterval: 4, repeats: false, block: { _ in
+            self.loadData()
+
+        })
     }
     
     // MARK: - Setup Methods
@@ -68,6 +76,7 @@ class ProductListViewController: UIViewController {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
                 self?.productCollectionView.reloadData()
+                self?.hideSkeletonAnimation()
             }
             .store(in: &cancellables)
         

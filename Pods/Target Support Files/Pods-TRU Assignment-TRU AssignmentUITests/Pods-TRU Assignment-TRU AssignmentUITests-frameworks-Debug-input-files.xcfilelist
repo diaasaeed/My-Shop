@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-TRU Assignment-TRU AssignmentUITests/Pods-TRU Assignment-TRU AssignmentUITests-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/Moya/Moya.framework
+${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework

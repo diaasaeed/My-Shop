@@ -7,12 +7,14 @@
 
 import Foundation
 import UIKit
+import SkeletonView
+
 extension ProductListViewController{
     // MARK: - Layout Methods
     func updateCollectionViewLayout() {
         let layout = createLayout(for: layoutStyle)
         // Use animated transition to new layout
-        productCollectionView.setCollectionViewLayout(layout, animated: true) { _ in
+        productCollectionView.setCollectionViewLayout(layout, animated: false) { _ in
             // Force reload after layout change to ensure correct cell types
             self.productCollectionView.reloadData()
         }
@@ -107,6 +109,7 @@ extension ProductListViewController: UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        guard indexPath.item < viewModel.products.count else { return }
         let product = viewModel.products[indexPath.item]
         if viewModel.shouldLoadMore(for: product) {
             viewModel.loadMoreProducts()

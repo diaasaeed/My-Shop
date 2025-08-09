@@ -4,19 +4,23 @@ PODS:
     - Moya/Core (= 15.0.0)
   - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
+  - SkeletonView (1.30.4)
 
 DEPENDENCIES:
   - Moya
+  - SkeletonView
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Moya
+    - SkeletonView
 
 SPEC CHECKSUMS:
   Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  SkeletonView: 5a050f6411e697abd4cda0a8d767013399dccd69
 
-PODFILE CHECKSUM: 94782b1420f2e168eeb193925a63e3207d222560
+PODFILE CHECKSUM: a73a3feb8d0eed0f6f6878a526f646a1c26ab420
 
 COCOAPODS: 1.16.2

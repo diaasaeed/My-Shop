@@ -8,7 +8,7 @@
 import UIKit
 
 class ProductGridCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var productImg: UIImageView!
     @IBOutlet weak var producntTitle: UILabel!
     @IBOutlet weak var productCategory: UILabel!
@@ -23,6 +23,8 @@ class ProductGridCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         setupUI()
+        setupSkeleton()
+        
     }
     
     private func setupUI() {
@@ -34,7 +36,7 @@ class ProductGridCell: UICollectionViewCell {
         producntView.layer.shadowRadius = 6
         producntView.layer.masksToBounds = false
         producntView.backgroundColor = .white  // or your cell background color
-
+        
         // categoryView - Only Corner Radius
         categoryView.layer.cornerRadius = 8
         categoryView.layer.masksToBounds = true
@@ -90,7 +92,7 @@ class ProductGridCell: UICollectionViewCell {
             loadImage(from: url)
         }
     }
-
+    
     
     private func loadImage(from url: URL) {
         URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
@@ -114,4 +116,38 @@ class ProductGridCell: UICollectionViewCell {
         productRate.text = nil
         productCountReviews.text = nil
     }
+    
+    
+    private func setupSkeleton() {
+        // Make views skeletonable
+        isSkeletonable = true
+        contentView.isSkeletonable = true
+        producntView.isSkeletonable = true
+        productImg.isSkeletonable = true
+        producntTitle.isSkeletonable = true
+        productCategory.isSkeletonable = true
+        productPrice.isSkeletonable = true
+        productRate.isSkeletonable = true
+        productCountReviews.isSkeletonable = true
+        categoryView.isSkeletonable = true
+        
+        // Configure skeleton appearance
+        productImg.skeletonCornerRadius = 8
+        categoryView.skeletonCornerRadius = 8
+        
+        // Configure text line heights for labels
+        producntTitle.linesCornerRadius = 4
+        productCategory.linesCornerRadius = 4
+        productPrice.linesCornerRadius = 4
+        productRate.linesCornerRadius = 4
+        productCountReviews.linesCornerRadius = 4
+        
+        // Set number of skeleton lines for multi-line labels
+        producntTitle.skeletonTextNumberOfLines = 2
+        productCategory.skeletonTextNumberOfLines = 1
+        productPrice.skeletonTextNumberOfLines = 1
+        productRate.skeletonTextNumberOfLines = 1
+        productCountReviews.skeletonTextNumberOfLines = 1
+    }
+    
 }
