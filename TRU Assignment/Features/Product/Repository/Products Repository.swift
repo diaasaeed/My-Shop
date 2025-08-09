@@ -34,6 +34,8 @@ class ProductsRepository: ProductsRepositoryProtocol {
     func fetchProducts(limit: Int, completion: @escaping (Result<[Product], Error>) -> Void) {
         // Always attempt network request first, regardless of reachability status
         // This is because NetworkReachabilityManager might not be ready immediately on app launch
+        let pr = getCachedProducts(limit: 7, offset: 0)
+        print("Count local product",pr.count , "asdasd",pr.first?.title ?? "")
         productsRequest.fetchProducts(limit: limit) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {

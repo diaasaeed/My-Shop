@@ -107,11 +107,13 @@ class ProductListViewController: UIViewController {
     // MARK: - UI Helpers
     private func showLoadingIndicator() {
         // Implement loading indicator
+//        showSkeletonAnimation()
         print("Loading...")
     }
     
     private func hideLoadingIndicator() {
         // Hide loading indicator
+        self.hideSkeletonAnimation()
         print("Loading finished")
     }
     
