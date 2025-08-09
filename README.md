@@ -128,7 +128,3 @@ open "TRU Assignment.xcworkspace"
 - Open `TRU Assignment.xcworkspace`
 - Select a simulator and Run
 
-## Notes
-- If you haven’t created `ProductEntity` in the Core Data model yet, the app will still work using an in-memory cache, then seamlessly switch to Core Data when the entity exists.
-- Network session timeouts are increased; logging is enabled via `NetworkLoggerPlugin`. Retry behavior is included for select error cases.
-
