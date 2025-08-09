@@ -105,6 +105,11 @@ extension ProductListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let product = viewModel.products[indexPath.item]
         // Handle product selection
+        // In your presenting view controller
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailsVC = storyboard.instantiateViewController(withIdentifier: "ProductDetailsTableViewController") as! ProductDetailsTableViewController
+        detailsVC.setProduct(product)
+        navigationController?.pushViewController(detailsVC, animated: true)
         print("Selected product: \(product.title)")
     }
     

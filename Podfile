@@ -7,6 +7,7 @@ target 'TRU Assignment' do
 
   # Pods for TRU Assignment
   pod 'Moya'
+  pod 'SkeletonView'
 
   
   target 'TRU AssignmentTests' do

@@ -44,11 +44,43 @@
                     <navigationItem key="navigationItem" id="Djg-U6-vdF"/>
                     <connections>
                         <outlet property="productCollectionView" destination="XPj-u4-1vZ" id="ITa-PV-ufg"/>
+                        <segue destination="gJ2-zm-Wf7" kind="push" id="GNL-Qr-py1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNd-lh-Rf8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-248" y="-432"/>
+        </scene>
+        <!--Product Details Table View Controller-->
+        <scene sceneID="tiv-JC-jRI">
+            <objects>
+                <viewController storyboardIdentifier="ProductDetailsTableViewController" id="gJ2-zm-Wf7" customClass="ProductDetailsTableViewController" customModule="TRU_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n34-j1-XW3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="p9e-J0-9IY">
+                                <rect key="frame" x="0.0" y="162" width="393" height="622"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="e5Q-vW-evf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="e5Q-vW-evf" firstAttribute="bottom" secondItem="p9e-J0-9IY" secondAttribute="bottom" id="Q7B-jM-WeA"/>
+                            <constraint firstItem="p9e-J0-9IY" firstAttribute="leading" secondItem="e5Q-vW-evf" secondAttribute="leading" id="cTp-4K-8af"/>
+                            <constraint firstAttribute="trailing" secondItem="p9e-J0-9IY" secondAttribute="trailing" id="deT-nF-QTb"/>
+                            <constraint firstItem="p9e-J0-9IY" firstAttribute="top" secondItem="e5Q-vW-evf" secondAttribute="top" id="sP0-4A-iR1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="h1g-ru-hQq"/>
+                    <connections>
+                        <outlet property="tableView" destination="p9e-J0-9IY" id="RjG-Ts-Xk6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Jm-ge-GI5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="450" y="-444"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gfp-yk-liV">
