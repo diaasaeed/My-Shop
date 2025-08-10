@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension ProductDetailsTableViewController{
+extension ProductDetailsViewController{
     
     // MARK: - Custom Stretchy Header View
     class StretchyTableHeaderView: UIView {

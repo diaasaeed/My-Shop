@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 // MARK: - Alternative Implementation Using UITableView
-class ProductDetailsTableViewController: UIViewController {
+class ProductDetailsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -63,7 +63,7 @@ class ProductDetailsTableViewController: UIViewController {
 }
 
 // MARK: - UITableViewDataSource & UITableViewDelegate
-extension ProductDetailsTableViewController: UITableViewDataSource, UITableViewDelegate {
+extension ProductDetailsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

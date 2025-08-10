@@ -51,10 +51,10 @@
             </objects>
             <point key="canvasLocation" x="-248" y="-432"/>
         </scene>
-        <!--Product Details Table View Controller-->
+        <!--Product Details View Controller-->
         <scene sceneID="tiv-JC-jRI">
             <objects>
-                <viewController storyboardIdentifier="ProductDetailsTableViewController" id="gJ2-zm-Wf7" customClass="ProductDetailsTableViewController" customModule="TRU_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductDetailsViewController" id="gJ2-zm-Wf7" customClass="ProductDetailsViewController" customModule="TRU_Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n34-j1-XW3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
