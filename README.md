@@ -1,4 +1,4 @@
-## TRU Assignment
+## My Shop
 A client iOS app that presents a list of products using MVVM with Clean Architecture, offline caching via Core Data, skeleton loading animations, and a reusable Moya-based network layer.
 
 ### Tech stack
